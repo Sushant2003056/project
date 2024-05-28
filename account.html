@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping account</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/ddbef3b5d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/trv.png">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150"></a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="35px" height="35px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+    </div>
+</div>
+
+<!--------Account page-------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-button">
+                        <span onclick="Register()">Register</span>
+                        <span onclick="Login()">Login</span>
+                        <hr id="Indicator">
+
+
+                    </div>
+
+                    <form id="Regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="button">Register</button>
+                    </form>
+
+                    <form id="Loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="button">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----footer------>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="images/logo.png" width="150px">
+                <p>Our goals to Achieving Beauty Goals,Creating Confidence Stories.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Shopbop</h3>
+                <ul>
+                    <li>Designer</li>
+                    <li>Fashion</li>
+                    <li>Brands</li>
+                </ul>
+            </div>
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="Copyright">© Copyright 2023 - Shopping</p>
+
+</div>
+</div>
+
+
+
+<!------JS for toggle menu--------->
+
+<script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(menuitems.style.maxHeight == "0px"){
+            menuitems.style.maxHeight = "200px";
+        }
+        else{
+            menuitems.style.maxHeight = "0px"
+        }
+    }
+
+</script>
+
+    <!------JS for toggle from--------->
+  <script>
+
+    var Loginform = document.getElementById("Loginform");
+    var Regform = document.getElementById("Regform");
+    var Indicator = document.getElementById("Indicator");
+
+    function Register(){
+        Regform.style.transform = "translateX(0px)";
+        Loginform.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+    function Login(){
+        Regform.style.transform = "translateX(-300px)";
+        Loginform.style.transform = "translateX(-300px)";
+        Indicator.style.transform = "translateX(100px)";
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping account</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/ddbef3b5d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="icon" type="image/png" sizes="16x16" href="images/trv.png">
+</head>
+<body>
+
+    <div class="container" >
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150"></a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="35px" height="35px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+    </div>
+</div>
+<!-----About----->
+
+<div class="small-container" >
+    <div class="about">
+        <img src="images/logo.png" >
+        <h5>Contact Shopping. Follow us on Social Media.
+        </h5>
+        <div class="small">
+            <a href=""><img src="images/insta.webp"></a>
+        <a href=""><img src="images/yt.jpg"></a>
+        <a href=""><img src="images/wa.png"></a>
+        <a href=""><img src="images/ph.png"></a>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+
+<!-----footer------>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="images/logo.png" width="150px">
+                <p>Our goals to Achieving Beauty Goals,Creating Confidence Stories.
+            </div>
+            <div class="footer-col-3">
+                <h3>Shopbop</h3>
+                <ul>
+                    <li>Designer</li>
+                    <li>Fashion</li>
+                    <li>Brands</li>
+                </ul>
+            </div>
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="Copyright">© Copyright 2023 - Shopping</p>
+
+</div>
+</div>
+
+
+
+<!------JS for toggle menu--------->
+
+<script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(menuitems.style.maxHeight == "0px"){
+            menuitems.style.maxHeight = "200px";
+        }
+        else{
+            menuitems.style.maxHeight = "0px"
+        }
+    }
+
+</script>
+
+</body>
+</html>
